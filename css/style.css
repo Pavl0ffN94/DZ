@@ -162,7 +162,6 @@ font-weight: 300;
 
 .appartments__cards{
   display: grid;
-  
   grid-template-columns: repeat(2, 1fr) ;
   gap:30px  ;
 }
@@ -224,4 +223,149 @@ font-weight: 300;
   right: 20px;
   bottom: 44px;
   font-size: 24px;
+}
+
+.cta{
+  padding: 180px 0;
+  background: 
+  linear-gradient(180deg, #242B33 10.42%, rgba(36, 43, 51, 0) 50.52%, #242B33 90.1%),
+   linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)), 
+   url("./../img/Rectangle.jpg"), #c4c4c4;
+}
+
+.cta__title{
+  margin-bottom: 17px;
+}
+
+.cta__wrapper{
+display: grid;
+grid-template-columns: 1fr 1fr;
+column-gap: 30px;
+align-items: center;
+}
+
+.cta__text{
+line-height: 1.5;
+}
+
+.form{
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   align-items: center;
+   gap: 35px 30px;
+  }
+  
+  .form__input-date{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in;
+    color: #fff;
+  }
+  .form__input-date:focus{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .form__input-date:hover{
+    scale: 1.03;
+    border: 1px solid #fff;
+  }
+  
+  .form__input-date:active{
+    border: 1px solid #fff;
+  }
+
+  .form__input-text{
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  transition: all 0.2s ease-in;
+  color: #fff;
+  padding: 12px;
+}
+.form__input-text:focus{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.form__input-text:hover{
+  scale: 1.03;
+  border: 1px solid #fff;
+}
+
+.form__input-text:active{
+  border: 1px solid #fff;
+}
+
+
+.form__input-pas{
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  transition: all 0.2s ease-in;
+  color: #fff;
+  padding: 12px;
+}
+.form__input-pas:focus{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.form__input-pas:hover{
+  scale: 1.03;
+  border: 1px solid #fff;
+}
+
+.form__input-pas:active{
+  border: 1px solid #fff;
+}
+
+.form__input-check{
+  height: 3rem;
+  transition: all 0.2s ease-in;
+}
+.form__input-color:hover{
+  scale: 1.05;
+}
+
+.form__input-color{
+  height: 4rem;
+  width: 4rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease-in;
+}
+
+.form__input-color:hover{
+  scale: 1.03;
+  border: 1px solid #fff;
+}
+
+.form__input-color:active{
+  border: 1px solid #fff;
+}
+
+.form__btn {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 50px;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background-color: #D4C17F;
+  transition: background-color 0.2s ease-in;
+}
+.form__btn:hover {
+  background-color: #9b832e;
 }
