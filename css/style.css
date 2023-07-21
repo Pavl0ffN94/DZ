@@ -239,7 +239,7 @@ font-weight: 300;
 
 .cta__wrapper{
 display: grid;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: repeat(2, 1fr);
 column-gap: 30px;
 align-items: center;
 }
@@ -263,21 +263,16 @@ line-height: 1.5;
     grid-column-end: 3;
     background-color: rgba(255, 255, 255, 0.2);
     font-size: 1.3rem;
-    transition: all 0.2s ease-in;
+    transition: all 0.5s ease-in;
     color: #fff;
   }
   .form__input-date:focus{
     background-color: rgba(255, 255, 255, 0.5);
   }
   .form__input-date:hover{
-    scale: 1.03;
-    border: 1px solid #fff;
+    cursor: pointer;
   }
   
-  .form__input-date:active{
-    border: 1px solid #fff;
-  }
-
   .form__input-text{
   display: grid;
   justify-content: center;
@@ -294,14 +289,8 @@ line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.5);
 }
 .form__input-text:hover{
-  scale: 1.03;
-  border: 1px solid #fff;
+  cursor: pointer;
 }
-
-.form__input-text:active{
-  border: 1px solid #fff;
-}
-
 
 .form__input-pas{
   display: grid;
@@ -319,32 +308,48 @@ line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.5);
 }
 .form__input-pas:hover{
-  scale: 1.03;
-  border: 1px solid #fff;
+  cursor: pointer;
 }
-
-.form__input-pas:active{
-  border: 1px solid #fff;
+.form__input-pas-confirm{
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  transition: all 0.2s ease-in;
+  color: #fff;
+  padding: 12px;
+}
+.form__input-pas-confirm:focus{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.form__input-pas-confirm:hover{
+  cursor: pointer;
 }
 
 .form__input-check{
-  height: 3rem;
+  height: 2rem;
+  width: 2rem;
   transition: all 0.2s ease-in;
 }
 .form__input-color:hover{
   scale: 1.05;
+  cursor: pointer;
 }
 
 .form__input-color{
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   background-color: rgba(255, 255, 255, 0.2);
   transition: all 0.2s ease-in;
 }
 
 .form__input-color:hover{
-  scale: 1.03;
+  scale: 1.05;
   border: 1px solid #fff;
+  cursor: pointer;
 }
 
 .form__input-color:active{
@@ -364,8 +369,13 @@ line-height: 1.5;
   font-weight: 700;
   text-align: center;
   background-color: #D4C17F;
-  transition: background-color 0.2s ease-in;
+  transition: background-color, hover 0.2s ease-in;
+  cursor: pointer;
 }
 .form__btn:hover {
   background-color: #9b832e;
+}
+
+.error{
+  border: 1px solid red;
 }

@@ -125,13 +125,29 @@
               </p>
             </div>
             <div class="cta__form">
-              <form action="" class="form">
-                <input class="form__input-date" type="date" />
-                <input class="form__input-text" type="text" />
-                <input class="form__input-pas" type="password" />
-                <input class="form__input-pas" type="password" />
-                <input class="form__input-color" type="color" />
-                <input class="form__input-check" type="checkbox" />
+              <form action="#!" id="form" class="form">
+                <input
+                  class="form__input-date"
+                  name="date"
+                  placeholder="Дата"
+                  type="date" />
+                <input
+                  class="form__input-text"
+                  name="text"
+                  placeholder="Введите текст"
+                  type="text" />
+                <input
+                  class="form__input-pas"
+                  name="pas"
+                  placeholder="введите пароль"
+                  type="password" />
+                <input
+                  class="form__input-pas-confirm"
+                  name="pasConfirm"
+                  placeholder="повторите пароль"
+                  type="password" />
+                <input class="form__input-color" name="color" type="color" />
+                <input class="form__input-check" name="check" type="checkbox" />
                 <button class="form__btn" type="submit">Посмотреть район</button>
               </form>
             </div>
@@ -139,5 +155,6 @@
         </div>
       </section>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
