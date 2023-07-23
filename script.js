@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+  const closeModalButton = document.getElementById('close-modal');
+  const form = document.getElementById('form');
+  
   function getFormData(event) {
     event.preventDefault();
 
-    // Собираем значения полей формы
     const text = document.getElementById('text');
     const date = document.getElementById('date');
     const pas = document.getElementById('pas');
@@ -11,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const colorDisplay = document.getElementById('colorDisplay');
     const check = document.getElementById('check');
     const modal = document.getElementById('modal');
-    const form = document.getElementById('form');
     const isCheckbox = (type) => ['checkbox'].includes(type);
 
     const values = {
@@ -48,9 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
       errorText.textContent = text; 
       modal.classList.add('open');
     }
-  
-
-
     function checkPassword() {
       const passwordField = document.querySelector('.form__input-pas');
       const confirmPasswordField = document.querySelector('.form__input-pas-confirm');
@@ -82,10 +81,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  const form = document.getElementById('form');
   form.addEventListener('submit', getFormData);
 
-  const closeModalButton = document.getElementById('close-modal');
   closeModalButton.addEventListener('click', function () {
     const modal = document.getElementById('modal');
     modal.classList.remove('open');
