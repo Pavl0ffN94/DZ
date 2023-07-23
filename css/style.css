@@ -2,12 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap");
 
 
- * {
-    padding: 0px;
-    margin: 0px;
-    border: none;
-    box-sizing: border-box;
-  }
 
   body {
     font-family: "Raleway", sans-serif;
@@ -34,7 +28,7 @@
     justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 74px;
-    min-height: 840px;
+    min-height: 400px;
     background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%), url("./../img/header_bg.jpg");
   }
 
@@ -43,15 +37,11 @@
     padding: 0 15px;
     max-width: 1140px;
   }
-  .container--sm {
-    max-width: 840px;
-  }
 
   .header__top-row {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 10rem;
   }
 
   .nav {
@@ -71,6 +61,7 @@
     font-family: "Playfair Display", serif;
     color: #D4C17F;
     font-weight: 700;
+    min-height: 300px;
   }
 
   .header__title-icon {
@@ -80,33 +71,27 @@
     transform: translate(-50%, 0);
   }
 
-  .info {
+  .info__map {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     font-size: 18px;
   }
-  .info--map, .info--tel {
-    padding-left: 35px;
+  .info__map img{
+    margin-right: 15px;
   }
-  
-  .info--map::before, .info--tel::before {
-    content: "";
-    position: absolute;
-    left: 0px;
-    top: 50%;
-    width: 21px;
-    height: 21px;
-    transform: translate(0%, -50%);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .info--map::before {
-    background-image: url("./../img/placeholder.svg");
-  }
-  .info--tel::before {
-    background-image: url("./../img/phone-call.svg");
-  }
+  .info__tel{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 18px;
+}
+.info__tel img{
+  margin-right: 15px;
+}
 
- 
 .header__footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -117,25 +102,15 @@
   text-align: right;
 }
 
-.visually-hidden {
-    height: 1px;
-    overflow: hidden;
-    width: 1px;
-    position: absolute;
-    clip: rect(1px 1px 1px 1px); 
-    clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(50%);
-            clip-path: inset(50%); 
-    white-space: nowrap;
-}
-
 .benefits{
-  padding: 120px 0;
+  padding: 120px 150px;
 }
 
 .benefits__row{
-  display: flex;
-  column-gap: 70px;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 70px;
+
 }
 
 .benefits__item{
@@ -143,7 +118,7 @@
 }
 
 .benefits__item-img{
-  margin-bottom: 53px;
+  margin-bottom: 50px;
 }
 
 .benefits__item-text{
@@ -162,8 +137,8 @@ font-weight: 300;
 
 .appartments__cards{
   display: grid;
-  grid-template-columns: repeat(2, 1fr) ;
-  gap:30px  ;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2 , 1fr);
 }
 
 .appartments__title{
@@ -238,29 +213,24 @@ font-weight: 300;
 }
 
 .cta__wrapper{
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-column-gap: 30px;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
 }
 
-.cta__text{
-line-height: 1.5;
-}
 
 .form{
    display: grid;
-   grid-template-columns: 1fr 2fr;
+   grid-template-columns: repeat(2, 2fr);
+   grid-template-rows: repeat(3, 1fr);
    align-items: center;
    gap: 35px 30px;
+   max-width: 500px;
   }
   
   .form__input-date{
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    grid-column-start: 1;
-    grid-column-end: 3;
     background-color: rgba(255, 255, 255, 0.2);
     font-size: 1.3rem;
     transition: all 0.5s ease-in;
@@ -274,11 +244,6 @@ line-height: 1.5;
   }
   
   .form__input-text{
-  display: grid;
-  justify-content: center;
-  justify-items: center;
-  grid-column-start: 1;
-  grid-column-end: 3;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 14px;
   transition: all 0.2s ease-in;
@@ -293,11 +258,6 @@ line-height: 1.5;
 }
 
 .form__input-pas{
-  display: grid;
-  justify-content: center;
-  justify-items: center;
-  grid-column-start: 1;
-  grid-column-end: 3;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 14px;
   transition: all 0.2s ease-in;
@@ -311,11 +271,6 @@ line-height: 1.5;
   cursor: pointer;
 }
 .form__input-pas-confirm{
-  display: grid;
-  justify-content: center;
-  justify-items: center;
-  grid-column-start: 1;
-  grid-column-end: 3;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 14px;
   transition: all 0.2s ease-in;
@@ -335,7 +290,6 @@ line-height: 1.5;
   transition: all 0.2s ease-in;
 }
 .form__input-color:hover{
-  scale: 1.05;
   cursor: pointer;
 }
 
@@ -347,7 +301,6 @@ line-height: 1.5;
 }
 
 .form__input-color:hover{
-  scale: 1.05;
   border: 1px solid #fff;
   cursor: pointer;
 }
@@ -357,9 +310,6 @@ line-height: 1.5;
 }
 
 .form__btn {
-  display: grid;
-  justify-content: center;
-  justify-items: center;
   grid-column-start: 1;
   grid-column-end: 3;
   height: 50px;
@@ -376,6 +326,72 @@ line-height: 1.5;
   background-color: #9b832e;
 }
 
+.checked__wrapper{
+  max-width: 300px;
+}
+
 .error{
   border: 1px solid red;
+}
+
+.modal{
+  position: fixed;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, .3);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal__box{
+  max-width: 500px;
+  padding: 30px;
+  background-color: #fff;
+  color: #000;
+  margin: 15px 10px;
+  box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+  transform: scale(0);
+  transition: transform .4s;
+}
+.modal-content {
+  color:#000;
+  font-size: 20px;
+}
+
+.close-modal{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.close-modal svg path {
+  transition: fill .4s;
+}
+
+.close-modal:hover svg path {
+  fill: black;
+}
+
+.close-modal:active svg path {
+  fill: #9b832e;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal.open .modal__box {
+  transform: scale(1);
 }
