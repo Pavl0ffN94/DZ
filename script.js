@@ -1,33 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  const closeModalButton = document.getElementById('close-modal');
-  const form = document.getElementById('form');
+  const closeModalButton = document.querySelector('.close-modal');
+  const form = document.querySelector('.form');
+  const modal = document.querySelector('.modal');
+  console.log(modal);
   
   function getFormData(event) {
     event.preventDefault();
 
-    const text = document.getElementById('text');
-    const date = document.getElementById('date');
-    const pas = document.getElementById('pas');
-    const pasConfirm = document.getElementById('pasConfirm');
-    const color = document.getElementById('color');
-    const colorDisplay = document.getElementById('colorDisplay');
-    const check = document.getElementById('check');
-    const modal = document.getElementById('modal');
+    const text = document.querySelector('.form__input-text');
+    const pas = document.querySelector('.form__input-pas');
+    const pasConfirm = document.querySelector('.form__input-pas-confirm');
+    const colorDisplay = document.querySelector('colorDisplay');
+ 
     const isCheckbox = (type) => ['checkbox'].includes(type);
+    const passwordField = document.querySelector('.form__input-pas');
+    const confirmPasswordField = document.querySelector('.form__input-pas-confirm');
+    const errorText = document.getElementById('errorText');
 
     const values = {
       text: text.value,
-      date: date.value,
       pas: pas.value,
       pasConfirm: pasConfirm.value,
-      color: color.value,
-      check: check.checked,
     };
 
-    const closeModalButton = document.getElementById('close-modal');
     closeModalButton.addEventListener('click', function () {
-      const modal = document.getElementById('modal');
       modal.classList.remove('open');
     });
 
@@ -46,14 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
     function openModal(text) {
-      const errorText = document.getElementById('errorText');
       errorText.textContent = text; 
       modal.classList.add('open');
     }
     function checkPassword() {
-      const passwordField = document.querySelector('.form__input-pas');
-      const confirmPasswordField = document.querySelector('.form__input-pas-confirm');
-
       if (passwordField.value.length < 8 ) {
         errors.push('Пароль должен состоять не менее чем из 8 символов!');
         return false;
@@ -84,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
   form.addEventListener('submit', getFormData);
 
   closeModalButton.addEventListener('click', function () {
-    const modal = document.getElementById('modal');
-    modal.classList.remove('open');
+    modal.classList.remove('.open');
   });
 });

@@ -31,24 +31,27 @@
       </div>
     </header>
 
-    <div class="container">
-      <h1 class="header__title">
-        Жилой комплекс
-        <br />
-        в историческом центре
-      </h1>
-    </div>
-    <div class="header__footer">
-      <div class="text-right">
-        <a class="info__map" href="#section-map">
-          <img src="./img/placeholder.svg" alt="fhone" />
-          Наб. реки Фонтанки 10-15
-        </a>
+    <div class="container sec__showcase">
+      <div class="showcase__title-wrapper">
+        <h1 class="showcase__title">
+          Жилой комплекс
+          <br />
+          в историческом центре
+        </h1>
+        <img class="showcase__title-icon" src="./img/mouse.svg" alt="mouse" />
+        <div class="showcase__footer">
+          <div class="text-right">
+            <a class="info__map" href="#section-map">
+              <img src="./img/placeholder.svg" alt="fhone" />
+              Наб. реки Фонтанки 10-15
+            </a>
+          </div>
+          <a class="info__tel" href="tel:+79999999">
+            <img src="./img/phone-call.svg" alt="" />
+            8 (812) 123-45-67
+          </a>
+        </div>
       </div>
-      <a class="info__tel" href="tel:+79999999">
-        <img src="./img/phone-call.svg" alt="" />
-        8 (812) 123-45-67
-      </a>
     </div>
 
     <main>
@@ -118,10 +121,10 @@
             <h2 class="title-2">Хотите посмотреть?</h2>
           </div>
           <div class="cta__wrapper">
-            <div id="modal" class="modal">
+            <div class="modal">
               <div class="modal__box">
                 <div class="modal-content"><pre id="errorText"></pre></div>
-                <button id="close-modal" class="close-modal">
+                <button class="close-modal">
                   <svg
                     width="15"
                     height="18"
@@ -139,42 +142,24 @@
               </div>
             </div>
             <div class="cta__form">
-              <form action="#!" id="form" class="form">
-                <input id="date" class="form__input-date" name="date" type="date" />
+              <form action="#!" class="form">
                 <input
-                  id="text"
                   class="form__input-text"
                   name="text"
                   placeholder="Введите текст"
                   type="text" />
                 <input
-                  id="pas"
                   class="form__input-pas"
                   name="pas"
                   placeholder="введите пароль"
                   type="password" />
                 <input
-                  id="pasConfirm"
                   class="form__input-pas-confirm"
                   name="pasConfirm"
                   placeholder="повторите пароль"
                   type="password" />
-                <div class="color__wrapper">
-                  <input class="form__input-color" id="color" name="color" type="color" />
-                  <label for="color">Выбрать цвет</label>
-                </div>
-                <div class="checked__wrapper">
-                  <input
-                    class="form__input-check"
-                    id="check"
-                    name="check"
-                    type="checkbox" />
-                  <label for="check">Дaю согласие на обработку данных</label>
-                </div>
 
-                <button class="form__btn" id="firm_btn" type="submit">
-                  Посмотреть район
-                </button>
+                <button class="form__btn" type="submit">Посмотреть район</button>
               </form>
             </div>
           </div>
