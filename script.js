@@ -1,82 +1,72 @@
 document.addEventListener('DOMContentLoaded', function () {
-
   const closeModalButton = document.querySelector('.close-modal');
-  const form = document.querySelector('.form');
+  const formElements = document.querySelector('.form');
   const modal = document.querySelector('.modal');
-  console.log(modal);
-  
-  function getFormData(event) {
-    event.preventDefault();
 
-    const text = document.querySelector('.form__input-text');
-    const pas = document.querySelector('.form__input-pas');
-    const pasConfirm = document.querySelector('.form__input-pas-confirm');
-    const colorDisplay = document.querySelector('colorDisplay');
- 
-    const isCheckbox = (type) => ['checkbox'].includes(type);
-    const passwordField = document.querySelector('.form__input-pas');
-    const confirmPasswordField = document.querySelector('.form__input-pas-confirm');
-    const errorText = document.getElementById('errorText');
-
-    const values = {
-      text: text.value,
-      pas: pas.value,
-      pasConfirm: pasConfirm.value,
-    };
-
-    closeModalButton.addEventListener('click', function () {
-      modal.classList.remove('open');
-    });
-
-    const errors = []; 
-
-    Object.keys(values).forEach((name) => {
-      const value = values[name];
-      const type = document.querySelector(`[name="${name}"]`).type;
-      values[name] = isCheckbox(type) ? value : value.trim();
-
-   
-      if (value === '') {
-        errors.push(`Поле "${name}" должно быть заполнено.`);
-      }
-    });
-    
-
-    function openModal(text) {
-      errorText.textContent = text; 
-      modal.classList.add('open');
-    }
-    function checkPassword() {
-      if (passwordField.value.length < 8 ) {
-        errors.push('Пароль должен состоять не менее чем из 8 символов!');
-        return false;
-      } if ( passwordField.value !== confirmPasswordField.value) {
-        errors.push('Пароли должны совпадать!');
-        return false;
-      }
-      return true;
-    }
-
-    if (checkPassword()) {
-      openModal('Форма успешно отправлена!');
-      form.reset();
-      
-      const errorElements = document.querySelectorAll('.error');
-      errorElements.forEach((errorElement) => {
-        errorElement.textContent = '';
-        errorElement.style.display = 'none';
-      }); 
-    } else {
-      if (errors.length > 0) {
-        const errorMessage = errors.join('\n');
-        openModal(errorMessage);
-      }
-    }
+  function openModal(text) {
+    const errorText = modal.querySelector('.error-text');
+    errorText.textContent = text;
+    modal.classList.add('open');
   }
 
-  form.addEventListener('submit', getFormData);
+  function closeModal() {
+    modal.classList.remove('open');
+  }
 
-  closeModalButton.addEventListener('click', function () {
-    modal.classList.remove('.open');
+  function getFormData(event) {
+    event.preventDefault();
+    const values = {};
+
+    formElements.childNodes.forEach(child => {
+      if (child.nodeName === 'INPUT') {
+        values[child.name] = child.value;
+      }
+    });
+
+    // Проверка на заполнение полей "text" и "date"
+    if (values['text'] === '') {
+      openModal('Поле Имя должно быть заполнено.');
+      return;
+    }
+
+    if (values['date'] === '') {
+      openModal('Поле даты должно быть заполнено.');
+      return;
+    }
+
+    // Проверка паролей
+    const passwordField = values['pas'];
+    const confirmPasswordField = values['pasConfirm'];
+
+    if (passwordField.length < 8) {
+      openModal('Пароль должен состоять не менее чем из 8 символов!');
+      return;
+    }
+
+    if (passwordField !== confirmPasswordField) {
+      openModal('Пароли должны совпадать!');
+      return;
+    }
+
+    openModal('Форма успешно отправлена!');
+    formElements.reset();
+  }
+
+  formElements.addEventListener('submit', getFormData);
+
+  closeModalButton.addEventListener('click', closeModal);
+
+  // Обработка нажатия на клавишу "Esc" для закрытия модального окна
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });
+
+  // Закрытие модального окна при клике вне его области
+  modal.addEventListener('click', function (event) {
+    if (event.target === modal) {
+      closeModal();
+    }
   });
 });

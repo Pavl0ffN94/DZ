@@ -1,123 +1,128 @@
 @import './resets.css';
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap");
 
-
-
-  body {
+body {
     font-family: "Raleway", sans-serif;
     background-color: #242B33;
     color: #fff;
     font-size: 16px;
-    padding: 20px;
   }
 
-  a {
+a {
     color: #fff;
     transition: color 0.2s ease-in;
     text-decoration: none;
   }
 
-  a:hover{
+a:hover{
     color: #D4C17F;
-    
   }
 
-  .header{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .container {
+.wraper{
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1890px;
+}
+.container {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 1140px;
   }
 
-  .sec__showcase{
-    background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%), url("./../img/header_bg.jpg");
-    background-repeat: no-repeat;
-    max-width: 1920px;
-    min-height: 840px;
+
+.header__top-row {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    
+.nav {
+    font-size: 14px;
+    }
+    
+.nav__list{
+      display: flex;
+      column-gap: 40px;
+    }
+
+.sec__showcase{
+    background: 
+    linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%), 
+    url("./../img/header_bg.jpg");
+    background-size: cover;
+    min-height: 765px;
   }
 
-  .header__top-row {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .nav {
-  font-size: 14px;
-  }
-
-  .nav__list{
-    display: flex;
-    column-gap: 40px;
-  }
-
-  .showcase__title-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .showcase__title{
+.showcase__wrapper{
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* знаю что можно repeat() но он не работал почему то */
+  margin-bottom: 150px;
+}
+  
+.showcase__title{
     position: relative;
     text-align: center;
     font-size: 48px;
     font-family: "Playfair Display", serif;
     color: #D4C17F;
     font-weight: 700;
-    margin-bottom: 81px;
+    grid-column: 3/7;
+    grid-row: 2;
   }
 
-  .showcase__title-icon {
-    transform: translate(-50%, 0);
-    margin-bottom: 200px;
-  }
-
-  .info__map {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 18px;
-  }
-  .info__map img{
-    margin-right: 15px;
-  }
-  .info__tel{
-  position: relative;
+.showcase__img {
+  grid-column: 4;
+  grid-row: 3;
+  margin-top: 81px;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 18px;
+  justify-content: flex-end;
 }
+
+.showcase__img img{
+  width: 40px;
+  height: 40px;
+}
+
+.info__map {
+  grid-row: 4;
+  grid-column: 4;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.info__map img{
+    margin-right: 15px;
+    width: 21px;
+    height: 21px;
+  }
+
+.info__tel{
+  grid-row: 4;
+  grid-column: 5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 .info__tel img{
   margin-right: 15px;
-}
-
-.showcase__footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.text-right{
-  text-align: right;
-}
-
-.benefits{
-  padding: 120px 150px;
+  width: 21px;
+  height: 21px;
+ 
 }
 
 .benefits__row{
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 grid-gap: 70px;
-
+margin-bottom: 120px;
 }
 
 .benefits__item{
@@ -142,10 +147,15 @@ font-weight: 300;
   font-weight: 700;
 }
 
+.appartments{
+  margin-bottom: 120px;
+}
+
 .appartments__cards{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2 , 1fr);
+  gap: 30px;
 }
 
 .appartments__title{
@@ -168,6 +178,7 @@ font-weight: 300;
   height: 100%;
   background: linear-gradient(180deg, rgba(36, 43, 51, 0) 0%, #242B33 100%);
 }
+
 .card::after {
   opacity: 0;
   content: "";
@@ -180,9 +191,11 @@ font-weight: 300;
   border: 3px double rgba(255, 255, 255, 0.4);
   transition: opacity 0.2s ease-in;
 }
+
 .card:hover {
   color: #fff;
 }
+
 .card:hover::after {
   opacity: 1;
 }
@@ -208,25 +221,32 @@ font-weight: 300;
 }
 
 .cta{
-  padding: 180px 0;
+display: grid;
   background: 
   linear-gradient(180deg, #242B33 10.42%, rgba(36, 43, 51, 0) 50.52%, #242B33 90.1%),
    linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)), 
    url("./../img/Rectangle.jpg"), #c4c4c4;
 }
 
+.cta-wrapper{
+  display: grid;
+  grid-template: 100px 1fr / 1fr 1fr ;
+}
+
 .cta__title{
-  margin-bottom: 17px;
+  grid-column: 1;
+  grid-row: 1;
 }
-
-.cta__wrapper{
+.cta__text{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 0;
+  grid-column: 1;
+  grid-row: 2;
+  align-items: flex-start;
 }
 
+.form__wrapper{
+grid-row: 1/2;
+}
 
 .form{
    display: grid;
@@ -237,29 +257,33 @@ font-weight: 300;
    max-width: 500px;
   }
   
-  .form__input-date{
+.form__input-date{
     background-color: rgba(255, 255, 255, 0.2);
     font-size: 1.3rem;
     transition: all 0.5s ease-in;
     color: #fff;
   }
-  .form__input-date:focus{
+
+.form__input-date:focus{
     background-color: rgba(255, 255, 255, 0.5);
   }
-  .form__input-date:hover{
+
+.form__input-date:hover{
     cursor: pointer;
   }
   
-  .form__input-text{
+.form__input-text{
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 14px;
   transition: all 0.2s ease-in;
   color: #fff;
   padding: 12px;
 }
+
 .form__input-text:focus{
   background-color: rgba(255, 255, 255, 0.5);
 }
+
 .form__input-text:hover{
   cursor: pointer;
 }
@@ -271,12 +295,15 @@ font-weight: 300;
   color: #fff;
   padding: 12px;
 }
+
 .form__input-pas:focus{
   background-color: rgba(255, 255, 255, 0.5);
 }
+
 .form__input-pas:hover{
   cursor: pointer;
 }
+
 .form__input-pas-confirm{
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 14px;
@@ -284,9 +311,11 @@ font-weight: 300;
   color: #fff;
   padding: 12px;
 }
+
 .form__input-pas-confirm:focus{
   background-color: rgba(255, 255, 255, 0.5);
 }
+
 .form__input-pas-confirm:hover{
   cursor: pointer;
 }
@@ -296,6 +325,7 @@ font-weight: 300;
   width: 2rem;
   transition: all 0.2s ease-in;
 }
+
 .form__input-color:hover{
   cursor: pointer;
 }
@@ -335,10 +365,6 @@ font-weight: 300;
 
 .checked__wrapper{
   max-width: 300px;
-}
-
-.error{
-  border: 1px solid red;
 }
 
 .modal{

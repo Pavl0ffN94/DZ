@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,164 +8,181 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header__top">
-        <div class="conatiner">
-          <div class="header__top-row">
-            <a href="#!">
-              <img class="header_logo" src="./img/logo.svg" alt="LoftHouse" />
-            </a>
-            <div class="header__nav">
-              <nav class="nav">
-                <ul class="nav__list">
-                  <li><a href="#!">О комплексе</a></li>
-                  <li><a href="#!">Район</a></li>
-                  <li><a href="#!">Катаог квартир</a></li>
-                  <li><a href="#!">Ипотека</a></li>
-                  <li><a href="#!">Контакты</a></li>
-                </ul>
-              </nav>
+    <div class="wraper">
+      <header class="header">
+        <div class="header__top">
+          <div class="conatiner">
+            <div class="header__top-row">
+              <a href="#!">
+                <img class="header_logo" src="./img/logo.svg" alt="LoftHouse" />
+              </a>
+              <div class="header__nav">
+                <nav class="nav">
+                  <ul class="nav__list">
+                    <li><a href="#!">О комплексе</a></li>
+                    <li><a href="#!">Район</a></li>
+                    <li><a href="#!">Катаог квартир</a></li>
+                    <li><a href="#!">Ипотека</a></li>
+                    <li><a href="#!">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <div class="container sec__showcase">
-      <div class="showcase__title-wrapper">
-        <h1 class="showcase__title">
-          Жилой комплекс
-          <br />
-          в историческом центре
-        </h1>
-        <img class="showcase__title-icon" src="./img/mouse.svg" alt="mouse" />
-        <div class="showcase__footer">
-          <div class="text-right">
-            <a class="info__map" href="#section-map">
+      <main class="main">
+        <section class="sec__showcase">
+          <div class="showcase__wrapper">
+            <h1 class="showcase__title">
+              Жилой комплекс
+              <br />
+              в историческом центре
+            </h1>
+            <div class="showcase__img">
+              <img class="showcase__title-icon" src="./img/mouse.svg" alt="mouse" />
+            </div>
+
+            <a class="info__map" href="#">
               <img src="./img/placeholder.svg" alt="fhone" />
               Наб. реки Фонтанки 10-15
             </a>
-          </div>
-          <a class="info__tel" href="tel:+79999999">
-            <img src="./img/phone-call.svg" alt="" />
-            8 (812) 123-45-67
-          </a>
-        </div>
-      </div>
-    </div>
 
-    <main>
-      <section class="benefits">
-        <h2 class="title-2">Преимушество ЖК</h2>
-
-        <div class="container conatiner--sm">
-          <div class="benefits__row">
-            <div class="benefits__item">
-              <img src="./img/bench.svg" alt="" class="benefits__item-img" />
-              <p class="benefits__item-text">
-                Рядом исторические
-                <br />
-                парки и скверы
-              </p>
-            </div>
-
-            <div class="benefits__item">
-              <img src="./img/bicycle.svg" alt="" class="benefits__item-img" />
-              <p class="benefits__item-text">Полностью обустроенный</p>
-            </div>
-
-            <div class="benefits__item">
-              <img src="./img/building.svg" alt="" class="benefits__item-img" />
-              <p class="benefits__item-text">10 фонтанов на территории</p>
-            </div>
-
-            <div class="benefits__item">
-              <img src="./img/fountain.svg" alt="" class="benefits__item-img" />
-              <p class="benefits__item-text">6 км велодорожек</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="appartments">
-        <div class="container">
-          <div class="appartments__title">
-            <h2 class="title-2">Наши квартиры</h2>
-          </div>
-          <div class="appartments__cards">
-            <a href="#!" class="card">
-              <img class="card__img" src="./img/01.jpg" alt="Пентхаус “Loft Олимп”" />
-              <h3 class="card__title">Пентхаус “Loft Олимп</h3>
-            </a>
-
-            <a href="#!" class="card">
-              <img class="card__img" src="./img/02.jpg" alt="Апартаменты “Nice Loft”" />
-              <h3 class="card__title">Апартаменты “Nice Loft”</h3>
-            </a>
-
-            <a href="#!" class="card">
-              <img class="card__img" src="./img/03.jpg" alt="Апартаменты “Loft Studio”" />
-              <h3 class="card__title">Апартаменты “Loft Studio”</h3>
-            </a>
-
-            <a href="#!" class="card">
-              <img class="card__img" src="./img/04.jpg" alt="Loft квартира “Престиж”" />
-              <h3 class="card__title">Loft квартира “Престиж”</h3>
+            <a class="info__tel" href="tel:+79999999">
+              <img src="./img/phone-call.svg" alt="" />
+              8 (812) 123-45-67
             </a>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="cta">
-        <div class="container">
-          <div class="cta__title">
-            <h2 class="title-2">Хотите посмотреть?</h2>
-          </div>
-          <div class="cta__wrapper">
-            <div class="modal">
-              <div class="modal__box">
-                <div class="modal-content"><pre id="errorText"></pre></div>
-                <button class="close-modal">
-                  <svg
-                    width="15"
-                    height="18"
-                    viewBox="0 0 23 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
-                      fill="#333333" />
-                    <path
-                      d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z"
-                      fill="#333333" />
-                  </svg>
-                </button>
+        <section class="benefits">
+          <div class="container">
+            <div class="benefits__row">
+              <div class="benefits__item">
+                <img src="./img/bench.svg" alt="" class="benefits__item-img" />
+                <p class="benefits__item-text">
+                  Рядом исторические
+                  <br />
+                  парки и скверы
+                </p>
+              </div>
+
+              <div class="benefits__item">
+                <img src="./img/building.svg" alt="" class="benefits__item-img" />
+                <p class="benefits__item-text">Полностью обустроенный</p>
+              </div>
+
+              <div class="benefits__item">
+                <img src="./img/fountain.svg" alt="" class="benefits__item-img" />
+                <p class="benefits__item-text">10 фонтанов на территории</p>
+              </div>
+
+              <div class="benefits__item">
+                <img src="./img/bicycle.svg" alt="" class="benefits__item-img" />
+                <p class="benefits__item-text">6 км велодорожек</p>
               </div>
             </div>
-            <div class="cta__form">
-              <form action="#!" class="form">
-                <input
-                  class="form__input-text"
-                  name="text"
-                  placeholder="Введите текст"
-                  type="text" />
-                <input
-                  class="form__input-pas"
-                  name="pas"
-                  placeholder="введите пароль"
-                  type="password" />
-                <input
-                  class="form__input-pas-confirm"
-                  name="pasConfirm"
-                  placeholder="повторите пароль"
-                  type="password" />
+          </div>
+        </section>
 
-                <button class="form__btn" type="submit">Посмотреть район</button>
-              </form>
+        <section class="appartments">
+          <div class="container">
+            <div class="appartments__title">
+              <h2 class="title-2">Наши квартиры</h2>
+            </div>
+            <div class="appartments__cards">
+              <a href="#!" class="card">
+                <img class="card__img" src="./img/01.jpg" alt="Пентхаус “Loft Олимп”" />
+                <h3 class="card__title">Пентхаус “Loft Олимп</h3>
+              </a>
+
+              <a href="#!" class="card">
+                <img class="card__img" src="./img/02.jpg" alt="Апартаменты “Nice Loft”" />
+                <h3 class="card__title">Апартаменты “Nice Loft”</h3>
+              </a>
+
+              <a href="#!" class="card">
+                <img
+                  class="card__img"
+                  src="./img/03.jpg"
+                  alt="Апартаменты “Loft Studio”" />
+                <h3 class="card__title">Апартаменты “Loft Studio”</h3>
+              </a>
+
+              <a href="#!" class="card">
+                <img class="card__img" src="./img/04.jpg" alt="Loft квартира “Престиж”" />
+                <h3 class="card__title">Loft квартира “Престиж”</h3>
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+
+        <section class="cta">
+          <div class="container">
+            <div class="cta-wrapper">
+              <div class="cta__title">
+                <h2 class="title-2">Хотите посмотреть?</h2>
+              </div>
+              <p class="cta__text">
+                ЖК LoftHouse – это проект бизнес-класса, расположенный в центре города, на
+                Наб. реки Фонтанки 10-15. Комплекс предлагает своим жильцам квартиры
+                площадью от 40 до 170 кв. м. В здании будет три секции, в которых
+                разместится всего 56 квартир.
+              </p>
+              <div class="form__wrapper">
+                <div class="cta__form">
+                  <form action="#!" class="form">
+                    <input
+                      class="form__input-text"
+                      name="text"
+                      id="text"
+                      placeholder="Ваше имя"
+                      type="text" />
+                    <input class="form__input-date" name="date" id="date" type="date" />
+                    <input
+                      class="form__input-pas"
+                      name="pas"
+                      id="pas"
+                      placeholder="введите пароль"
+                      type="password" />
+                    <input
+                      class="form__input-pas-confirm"
+                      name="pasConfirm"
+                      id="pasConfirm"
+                      placeholder="повторите пароль"
+                      type="password" />
+
+                    <button class="form__btn" type="submit">Посмотреть район</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal">
+      <div class="modal__box">
+        <div class="modal-content"><pre class="error-text"></pre></div>
+        <button class="close-modal">
+          <svg
+            width="15"
+            height="18"
+            viewBox="0 0 23 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+              fill="#333333" />
+            <path
+              d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z"
+              fill="#333333" />
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
