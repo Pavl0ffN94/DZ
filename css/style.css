@@ -5,7 +5,7 @@ body {
     font-family: "Raleway", sans-serif;
     background-color: #242B33;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
   }
 
 a {
@@ -18,18 +18,13 @@ a:hover{
     color: #D4C17F;
   }
 
-.wraper{
-  margin: 0 auto;
-  max-width: 1890px;
-}
+
 .container {
     margin: 0 auto;
-    padding: 0 15px;
     max-width: 1140px;
-  }
+}
 
-
-.header__top-row {
+.header{
       display: flex;
       justify-content: space-evenly;
       align-items: center;
@@ -48,16 +43,25 @@ a:hover{
     background: 
     linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%), 
     url("./../img/header_bg.jpg");
+    border: none;
     background-size: cover;
-    min-height: 765px;
-    display: grid;
-    align-items: end;
+    min-height: 840px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
+
 .showcase__wrapper{
-  display: grid;
-  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 470px;
+  width: 580px;
 }
+
   
 .showcase__title{
     position: relative;
@@ -66,13 +70,9 @@ a:hover{
     font-family: "Playfair Display", serif;
     color: #D4C17F;
     font-weight: 700;
-    grid-column: 3/7;
-    grid-row: 2;
   }
 
 .showcase__img {
-  grid-column: 4;
-  grid-row: 3;
   margin-top: 81px;
   display: grid;
   justify-content: flex-end;
@@ -84,13 +84,10 @@ a:hover{
 }
 
 .info__map {
-  grid-row: 4;
-  grid-column: 4;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-end;
-  margin-top: 200px;
 }
 
 .info__map img{
@@ -100,29 +97,29 @@ a:hover{
   }
 
 .info__tel{
-  grid-row: 4;
-  grid-column: 5;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin-left: 50px;
+  margin-left: 100px;
   justify-content: flex-start;
-  margin-top: 200px;
-
 }
 
 .info__tel img{
   margin-right: 15px;
   width: 21px;
   height: 21px;
- 
 }
 
 .benefits__row{
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 grid-gap: 70px;
-margin: 120px 0;
+margin-bottom: 40px;
+}
+
+.showcase__contacts{
+  display: flex;
+  flex-direction: row;
 }
 
 .benefits__item{
@@ -147,6 +144,12 @@ font-weight: 300;
   font-weight: 700;
 }
 
+.appartments__wrapper{
+  margin: 0 auto;
+  max-width: 1100px;
+  max-height: 800px;
+}
+
 .appartments{
   margin-bottom: 120px;
 }
@@ -169,6 +172,7 @@ font-weight: 300;
   display: inline-block;
   color: #fff;
 }
+
 .card::before {
   content: "";
   position: absolute;
@@ -233,8 +237,10 @@ font-weight: 300;
   display: grid;
   grid-template:  1fr / 1fr 1fr ;
   margin: 0 auto;
+  gap: 30px;
   max-width: 1140px;
-  margin-bottom: 150px;
+  max-height: 560px;
+  margin-bottom: 200px;
 }
 
 .cta__title{
@@ -250,23 +256,23 @@ font-weight: 300;
 }
 
 .form__wrapper{
-grid-row: 1/2;
+  grid-row: 1/2;
 }
 
 .form{
    display: grid;
-   grid-template-columns: repeat(2, 2fr);
-   grid-template-rows: repeat(3, 50px);
-   align-items: center;
-   gap: 35px 30px;
+   grid-template-columns: repeat(2, 255px);
+   grid-template-rows: repeat(2, 50px);
+   gap: 30px 30px;
   }
   
 .form__input{
-  height: 50px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
   font-size: 14px;
+  justify-content: space-evenly;
+  border: none;
 }
 
 .form__input::placeholder{
@@ -276,7 +282,6 @@ grid-row: 1/2;
 .form__btn {
   grid-column-start: 2;
   grid-column-end: 3;
-  height: 50px;
   padding: 12px;
   font-size: 16px;
   color: #fff;
@@ -285,11 +290,13 @@ grid-row: 1/2;
   background-color: #D4C17F;
   transition: background-color, hover 0.2s ease-in;
   cursor: pointer;
-}
-.form__btn:hover {
-  background-color: #9b832e;
+  border: none;
 }
 
+.form__btn:hover {
+  background-color: #9b832e;
+  pad: 50px 15px;
+}
 
 .modal{
   position: fixed;
@@ -318,6 +325,7 @@ grid-row: 1/2;
   opacity: 0;
   transition: opacity .4s;
 }
+
 .modal-content {
   color:#000;
   font-size: 20px;

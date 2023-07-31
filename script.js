@@ -29,11 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    if (values['date'] === '') {
-      showModal('Поле даты должно быть заполнено.');
-      return;
-    }
-
     // Проверка паролей
     const passwordField = values['pas'];
     const confirmPasswordField = values['confirmPas'];
