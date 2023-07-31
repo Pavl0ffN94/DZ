@@ -20,7 +20,6 @@ a:hover{
 
 .wraper{
   margin: 0 auto;
-  padding: 0 15px;
   max-width: 1890px;
 }
 .container {
@@ -51,11 +50,12 @@ a:hover{
     url("./../img/header_bg.jpg");
     background-size: cover;
     min-height: 765px;
-  }
+    display: grid;
+    align-items: end;
+}
 
 .showcase__wrapper{
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* знаю что можно repeat() но он не работал почему то */
   margin-bottom: 150px;
 }
   
@@ -74,7 +74,7 @@ a:hover{
   grid-column: 4;
   grid-row: 3;
   margin-top: 81px;
-  display: flex;
+  display: grid;
   justify-content: flex-end;
 }
 
@@ -90,8 +90,7 @@ a:hover{
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-end;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 200px;
 }
 
 .info__map img{
@@ -106,9 +105,10 @@ a:hover{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-left: 50px;
+  justify-content: flex-start;
+  margin-top: 200px;
+
 }
 
 .info__tel img{
@@ -122,7 +122,7 @@ a:hover{
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 grid-gap: 70px;
-margin-bottom: 120px;
+margin: 120px 0;
 }
 
 .benefits__item{
@@ -160,6 +160,7 @@ font-weight: 300;
 
 .appartments__title{
   margin-bottom: 88px;
+  padding: 10px;
 }
 
 .card {
@@ -221,7 +222,7 @@ font-weight: 300;
 }
 
 .cta{
-display: grid;
+  display: grid;
   background: 
   linear-gradient(180deg, #242B33 10.42%, rgba(36, 43, 51, 0) 50.52%, #242B33 90.1%),
    linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)), 
@@ -230,10 +231,14 @@ display: grid;
 
 .cta-wrapper{
   display: grid;
-  grid-template: 100px 1fr / 1fr 1fr ;
+  grid-template:  1fr / 1fr 1fr ;
+  margin: 0 auto;
+  max-width: 1140px;
+  margin-bottom: 150px;
 }
 
 .cta__title{
+  display: grid;
   grid-column: 1;
   grid-row: 1;
 }
@@ -251,103 +256,25 @@ grid-row: 1/2;
 .form{
    display: grid;
    grid-template-columns: repeat(2, 2fr);
-   grid-template-rows: repeat(3, 1fr);
+   grid-template-rows: repeat(3, 50px);
    align-items: center;
    gap: 35px 30px;
-   max-width: 500px;
   }
   
-.form__input-date{
-    background-color: rgba(255, 255, 255, 0.2);
-    font-size: 1.3rem;
-    transition: all 0.5s ease-in;
-    color: #fff;
-  }
-
-.form__input-date:focus{
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-
-.form__input-date:hover{
-    cursor: pointer;
-  }
-  
-.form__input-text{
+.form__input{
+  height: 50px;
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.2);
-  font-size: 14px;
-  transition: all 0.2s ease-in;
   color: #fff;
-  padding: 12px;
-}
-
-.form__input-text:focus{
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.form__input-text:hover{
-  cursor: pointer;
-}
-
-.form__input-pas{
-  background-color: rgba(255, 255, 255, 0.2);
   font-size: 14px;
-  transition: all 0.2s ease-in;
-  color: #fff;
-  padding: 12px;
 }
 
-.form__input-pas:focus{
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.form__input-pas:hover{
-  cursor: pointer;
-}
-
-.form__input-pas-confirm{
-  background-color: rgba(255, 255, 255, 0.2);
-  font-size: 14px;
-  transition: all 0.2s ease-in;
-  color: #fff;
-  padding: 12px;
-}
-
-.form__input-pas-confirm:focus{
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.form__input-pas-confirm:hover{
-  cursor: pointer;
-}
-
-.form__input-check{
-  height: 2rem;
-  width: 2rem;
-  transition: all 0.2s ease-in;
-}
-
-.form__input-color:hover{
-  cursor: pointer;
-}
-
-.form__input-color{
-  height: 3rem;
-  width: 3rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  transition: all 0.2s ease-in;
-}
-
-.form__input-color:hover{
-  border: 1px solid #fff;
-  cursor: pointer;
-}
-
-.form__input-color:active{
-  border: 1px solid #fff;
+.form__input::placeholder{
+  color: #BEBEBE;
 }
 
 .form__btn {
-  grid-column-start: 1;
+  grid-column-start: 2;
   grid-column-end: 3;
   height: 50px;
   padding: 12px;
@@ -363,9 +290,6 @@ grid-row: 1/2;
   background-color: #9b832e;
 }
 
-.checked__wrapper{
-  max-width: 300px;
-}
 
 .modal{
   position: fixed;
@@ -384,21 +308,22 @@ grid-row: 1/2;
 }
 
 .modal__box{
+  position: relative;
   max-width: 500px;
   padding: 30px;
   background-color: #fff;
   color: #000;
   margin: 15px 10px;
   box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
-  transform: scale(0);
-  transition: transform .4s;
+  opacity: 0;
+  transition: opacity .4s;
 }
 .modal-content {
   color:#000;
   font-size: 20px;
 }
 
-.close-modal{
+.clos-modal{
   position: absolute;
   top: 5px;
   right: 5px;
@@ -408,23 +333,23 @@ grid-row: 1/2;
   cursor: pointer;
 }
 
-.close-modal svg path {
+.clos-modal svg path {
   transition: fill .4s;
 }
 
-.close-modal:hover svg path {
+.clos-modal:hover svg path {
   fill: black;
 }
 
-.close-modal:active svg path {
+.clos-modal:active svg path {
   fill: #9b832e;
 }
 
-.modal.open {
+.modal.opend {
   visibility: visible;
   opacity: 1;
 }
 
-.modal.open .modal__box {
-  transform: scale(1);
+.modal.opend .modal__box {
+  opacity: 1;
 }
