@@ -53,7 +53,6 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
 }
 
 
@@ -155,7 +154,7 @@ font-weight: 300;
 }
 
 .appartments{
-  margin-bottom: 120px;
+height: 800px;
 }
 
 .appartments__cards{
@@ -167,7 +166,6 @@ font-weight: 300;
 
 .appartments__title{
   margin-bottom: 88px;
-  padding: 10px;
 }
 
 .card {
@@ -235,7 +233,10 @@ font-weight: 300;
   linear-gradient(180deg, #242B33 10.42%, rgba(36, 43, 51, 0) 50.52%, #242B33 90.1%),
    linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)), 
    url("./../img/Rectangle.jpg"), #c4c4c4;
+   height: 560px;
+   align-content: space-evenly;
 }
+
 
 .cta-wrapper{
   display: grid;
@@ -243,8 +244,6 @@ font-weight: 300;
   margin: 0 auto;
   gap: 30px;
   max-width: 1140px;
-  max-height: 560px;
-  margin-bottom: 200px;
 }
 
 .cta__title{
@@ -253,10 +252,7 @@ font-weight: 300;
   grid-row: 1;
 }
 .cta__text{
-  display: flex;
-  grid-column: 1;
-  grid-row: 2;
-  align-items: flex-start;
+font-size: 16px;
 }
 
 .form__wrapper{
@@ -298,7 +294,7 @@ font-weight: 300;
 }
 
 .form__btn:hover {
-  background-color: #9b832e;
+  background-color: #dfb212;
   pad: 50px 15px;
 }
 
